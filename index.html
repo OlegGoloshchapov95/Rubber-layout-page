@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Rubber layout page</title>
+    <meta name="Description" content="description">
+    <meta name="Keywords" content="keywords">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script> 
+    <script>
+     	$(document).ready(function(event){
+     		var clickBurgerButton = function(){ 
+				if(toggleOpener){
+					opener.unwrap();
+					toggleOpener = false;
+					//$('#header ul').css("display","");
+					$('#header ul').css("display","");
+				}else{
+					opener.wrap('<div class="active"></div>');
+					toggleOpener = true;
+					//$('#header ul').css("display","block");
+					$('#header ul').slideDown();
+				} 
+			};
+			var toggleOpener = false;
+			var opener = $('.opener'); 
+			opener.on("click", clickBurgerButton);
+		}); 
+    </script>       
+</head>
+<body>  
+<div id="wrapper">
+	<a href="#" class="opener">
+    	<div  class="dropdown-box"></div>
+    	<div  class="dropdown-box"></div>
+    	<div  class="dropdown-box"></div>
+    </a> 
+		<header id="header">
+    		<ul class="conteiner clearfix">
+                 <li><a href="#">Home</a></li> 
+                 <li><a href="#">Discover The Chesapeake Bay</a></li> 
+                 <li><a href="#">The Community</a></li> 
+                 <li><a href="#">Services</a></li> 
+                 <li><a href="#">Making The Decision</a></li> 
+                 <li><a href="#">News & Events</a></li> 
+                 <li><a href="#">Contact Us</a></li>  
+    		</ul>
+    	</header>
+    	<main class="container" id="main">
+    		<div class="clearfix"> 
+	    		<div class="phone-number">800-753-2918</div>
+	    	</div>	
+	    	<div class="logo-container">
+    			<a href="#"><img width="100%"  src="images/introducting-our-new-img.png" alt="logo"></img></a>
+    		</div>
+    		<div class="content-block">
+	    		<div class="image-gallery">
+		    		<div class="img">
+		    			<img src="images/three-images-img1.jpg" alt="three-img-img1"/>
+		    		</div>
+		    		<div class="img">
+		    			<img src="images/three-images-img2.jpg" alt="three-img-img2"/>
+		    		</div>
+		    		<div class="img">
+		    			<img src="images/three-images-img3.jpg" alt="three-img-img3"/>
+		    		</div>
+		    	</div>
+		    	<div class="informations-block">
+		    	   		<h1>Experience the benefits of our beachfront retirement community<br/>
+	                   —while still living in your own home! </h1>
+		    	   		<p class="descr">When you enroll in our Early Advantage Program you get access to all the outstanding amenities our exquisite beachfront community offers--without moving from your current home. Plus, you gain security for the future. So start enjoying every sun-filled day at Westminster-Canterbury at Chesapeake Bay right now!</p>	
+		    	   		
+		    	   		<span class="block-with-ancor"><a href="#">our beautiful beachfront lifestyle</a></span>
+		     					    	
+	                    <span class="block-with-ancor"><a href="#">health, wellness and peace of mind</a></span>	
+	    	    </div>
+	    	    <div <div class="pre-forms-yes">
+	    	   		<h2>yes,</h2>
+	    	   		<p>please send me more information about the Early Advantage Program!</p>
+	    	    </div>
+	    	    <div class="forms-block">
+		    	    <form>
+		    	    	<div class="two-columns clearfix">
+		    	    	     <div class="column">
+			    	    	    <input type="text" class="left" id="first-name" name="first-name" placeholder="first name"/>
+			    	   			<input type="text" class="left" id="last-name" name="last-name" placeholder="last name"/>
+			    	   			<input type="text" class="left" id="e-mail-address" name="e-mail-address" placeholder="e-mail address"/>
+						    	<input type="text" class="left" id="phone" name="phone" placeholder="phone"/>
+		                        <input type="text" class="left" id="address" name="address" placeholder="address"/>
+		    	    	     </div>
+		    	    	     <div class="column">
+			    	    	     <input type="text" class="right" id="city" name="city" placeholder="city"/>
+			    	    	    <select name="sex" class="right select-man-woman"> 
+			                        <option value="man">man</option>
+			                        <option value="woman">woman</option>     
+			                    </select>
+			                    <input type="text" class="right" id="zip" name="zip" placeholder="zip"/>
+			                    <textarea placeholder="comments" rows="4" cols="45" class="right" name="text"></textarea> 
+		    	    	     </div>
+		    	    	</div>
+		    	    	<button type="submit">submit</button> 
+		    	    </form>
+		    	</div>
+		    	<div class="tracery"></div>
+                <footer id="footer">
+                <!--Бэгешки не ставятся. Это блок, а внутри блока имаги-->
+                	<div class="two-images-block">
+				    		<a href="#"><img src="images/footer-img-left.jpg"></img></a>
+				    		<a href="#"><img src="images/footer-img-right.jpg"></img></a>
+				    </div>
+				    <p>*Our Early Advantage Program is currently available to waitlist members ONLY. Open to the public in 2017.<br/>
+	                © 2016 Westminster Canterbury on Chesapeake Bay. All rights reserved.</p>
+	                <div class="footer-icons">
+		                <a href="#"><img src="images/footer-icon-1.png"></img></a> 
+		                <a href="#"><img src="images/footer-icon-2.png"></img></a> 
+	                </div>
+                </footer>
+		    </div>	
+    	</main>
+</div>
+</body>
+</html>	
