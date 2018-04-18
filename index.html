@@ -6,28 +6,7 @@
     <meta name="Keywords" content="keywords">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script> 
-    <script>
-     	$(document).ready(function(event){
-     		var clickBurgerButton = function(){ 
-				if(toggleOpener){
-					opener.unwrap();
-					toggleOpener = false;
-					//$('#header ul').css("display","");
-					$('#header ul').css("display","");
-				}else{
-					opener.wrap('<div class="active"></div>');
-					toggleOpener = true;
-					//$('#header ul').css("display","block");
-					$('#header ul').slideDown();
-				} 
-			};
-			var toggleOpener = false;
-			var opener = $('.opener'); 
-			opener.on("click", clickBurgerButton);
-		}); 
-    </script>       
+    <link rel="stylesheet" type="text/css" href="css/style.css">  
 </head>
 <body>  
 <div id="wrapper">
@@ -103,21 +82,43 @@
 		    	    </form>
 		    	</div>
 		    	<div class="tracery"></div>
-                <footer id="footer">
-                <!--Бэгешки не ставятся. Это блок, а внутри блока имаги-->
-                	<div class="two-images-block">
-				    		<a href="#"><img src="images/footer-img-left.jpg"></img></a>
-				    		<a href="#"><img src="images/footer-img-right.jpg"></img></a>
-				    </div>
-				    <p>*Our Early Advantage Program is currently available to waitlist members ONLY. Open to the public in 2017.<br/>
-	                © 2016 Westminster Canterbury on Chesapeake Bay. All rights reserved.</p>
-	                <div class="footer-icons">
-		                <a href="#"><img src="images/footer-icon-1.png"></img></a> 
-		                <a href="#"><img src="images/footer-icon-2.png"></img></a> 
-	                </div>
-                </footer>
 		    </div>	
     	</main>
+    	<footer class="container" id="footer">
+    	    <div class="content-block">
+                <div class="two-images-block">
+				    	<a href="#"><img src="images/footer-img-left.jpg"></img></a>
+				    	<a href="#"><img src="images/footer-img-right.jpg"></img></a>
+				</div>
+				 <p>*Our Early Advantage Program is currently available to waitlist members ONLY. Open to the public in 2017.<br/>
+	             © 2016 Westminster Canterbury on Chesapeake Bay. All rights reserved.</p>
+	             <div class="footer-icons">
+		            <a href="#"><img src="images/footer-icon-1.png"></img></a> 
+		            <a href="#"><img src="images/footer-icon-2.png"></img></a> 
+	             </div>
+	        </div>     
+        </footer>
 </div>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script> 
+    <script>
+     	$(document).ready(function(event){
+     		var clickBurgerButton = function(){ 
+				if(toggleOpener){
+					opener.unwrap();
+					toggleOpener = false;
+					//$('#header ul').css("display","");
+					$('#header ul').css("display","");
+				}else{
+					opener.wrap('<div class="active"></div>');
+					toggleOpener = true;
+					//$('#header ul').css("display","block");
+					$('#header ul').slideDown();
+				} 
+			};
+			var toggleOpener = false;
+			var opener = $('.opener'); 
+			opener.on("click", clickBurgerButton);
+		}); 
+    </script>     
 </body>
 </html>	
